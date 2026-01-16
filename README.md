@@ -1,1 +1,0 @@
-# rag-first-template

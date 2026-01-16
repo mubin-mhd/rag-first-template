@@ -1,0 +1,9 @@
+{
+  "welcome": "Welcome to chat!",
+  "user": "You",
+  "assistant": "Assistant",
+  "inputPlaceholder": "Type your message...",
+  "send": "Send",
+  "loading": "Loading",
+  "error": "Error"
+}

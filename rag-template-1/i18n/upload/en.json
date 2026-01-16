@@ -1,0 +1,9 @@
+{
+  "uploadFile": "Upload File",
+  "dragDrop": "Drag & drop files here",
+  "browse": "Browse",
+  "uploading": "Uploading",
+  "success": "Uploaded",
+  "error": "Error",
+  "dropAreaLabel": "File upload area"
+}
