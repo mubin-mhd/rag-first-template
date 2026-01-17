@@ -2,6 +2,8 @@ import templateConfig from "./template.config";
 import brandingConfig from "./branding.config";
 import themeConfig from "./theme.config";
 import featuresConfig from "./features.config";
+import { ChatLayout } from "./components/ChatLayout";
+import { Sidebar } from "./components/Sidebar";
 
 import en from './i18n/en.json';
 import id from './i18n/id.json';
@@ -14,5 +16,9 @@ export default {
     i18n: {
         en,
         id
+    },
+    components: {
+        ChatLayout,
+        Sidebar
     }
-}
+}   

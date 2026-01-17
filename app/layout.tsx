@@ -3,7 +3,7 @@ import "../app/theme.css";
 import { getUiConfig } from "../config/ui.config";
 import { defaultConfig, mergeConfig } from "@/core/config";
 import { loadTemplate } from "@/core/template";
-import { AppProviders } from "./AppProviders";
+import { AppProviders } from "@/core/providers/AppProviders";
 
 const template = loadTemplate(process.env.NEXT_PUBLIC_TEMPLATE_ID);
 

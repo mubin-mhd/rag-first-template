@@ -1,4 +1,7 @@
-// ...existing code...
+"use client";
+
+import { RagApp } from "@/core/ui/RagApp";
+
 export default function HomePage() {
-  return <main>RAG UI Starter Kit Home</main>;
+  return <RagApp />;
 }
