@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useRef, useCallback } from 'react';
 import { getApiConfig } from '../../config/api.config';
 import { RagChatRequest, RagChatResponse } from '../../types/rag.api.contract';

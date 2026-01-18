@@ -1,7 +1,7 @@
 "use client";
 
-import { RagApp } from "@/core/ui/RagApp";
+import { TemplateRenderer } from "@/core/TemplateRenderer";
 
 export default function HomePage() {
-  return <RagApp />;
+  return <TemplateRenderer />;
 }

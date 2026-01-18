@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useCallback } from 'react';
 import { getAppConfig } from '../../config/app.config';
 

@@ -1,5 +1,11 @@
 {
   "app.name": "Modern AI Assistant",
   "app.footer": "Powered by RAG UI Engine",
-  "chat.placeholder": "Ask your documents..."
+  "chat.placeholder": "Ask your documents...",
+  "chat.button.send": "Send",
+  "chat.input.placeholder": "Type your message here...",
+  "chat.input.error": "Failed to send message. Please try again.",
+  "assistant": "Assistant",
+  "loading": "Loading...",
+  "error": "Error"
 }
