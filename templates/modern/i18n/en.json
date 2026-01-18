@@ -22,6 +22,8 @@
   "documentManager.table.status": "Status",
   "documentManager.table.added": "Added",
   "documentManager.table.size": "Size",
+  "documentManager.uploading": "Uploading documents...",
+  "documentManager.uploadError": "Failed to upload documents.",
   "sidebar.section.workspace": "Workspace",
   "sidebar.section.projects": "Projects",
   "sidebar.section.tags": "Tags",

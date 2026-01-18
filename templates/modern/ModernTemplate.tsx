@@ -14,7 +14,7 @@ export const ModernTemplate = ({ config }) => {
     useChatController();
   const { user } = useUser();
   const { activeNav, setActiveNav } = useNavigation();
-  const { files } = useFiles();
+  const { files, isUploading, error: uploadError, handleUpload } = useFiles();
   const t = useT();
 
   return (
@@ -31,8 +31,9 @@ export const ModernTemplate = ({ config }) => {
       {config.features.enableUpload && (
         <DocumentManager
           files={files}
-          onAddNew={() => alert("Add new document")}
-          onUpload={() => alert("Upload document")}
+          onUpload={handleUpload}
+          isUploading={isUploading}
+          error={uploadError}
           t={t}
         />
       )}

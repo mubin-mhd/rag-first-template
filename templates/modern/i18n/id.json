@@ -22,6 +22,8 @@
   "documentManager.table.status": "Status",
   "documentManager.table.added": "Ditambahkan",
   "documentManager.table.size": "Ukuran",
+  "documentManager.uploading": "Mengunggah dokumen...",
+  "documentManager.uploadError": "Gagal mengunggah dokumen.",
   "sidebar.section.workspace": "Workspace",
   "sidebar.section.projects": "Proyek",
   "sidebar.section.tags": "Tag",
