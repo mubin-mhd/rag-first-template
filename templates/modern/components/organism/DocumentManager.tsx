@@ -4,13 +4,13 @@ import { Button } from "../atoms/Button";
 import { Icon } from "../atoms/Icon";
 import { FileCard } from "../molecules/FileCard";
 
-export const DocumentManager = ({ files, onAddNew, onUpload }) => {
+export const DocumentManager = ({ files, onAddNew, onUpload, t }) => {
   return (
     <div className="flex-1 bg-white p-8 overflow-y-auto">
       {/* Header */}
       <div className="mb-8">
         <Text variant="h2" className="mb-6">
-          Upload Knowledge
+          {t('documentManager.title')}
         </Text>
         <UploadZone onUpload={onUpload} />
       </div>
@@ -18,9 +18,9 @@ export const DocumentManager = ({ files, onAddNew, onUpload }) => {
       {/* Breadcrumb */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2 text-sm text-gray-600">
-          <span>Home</span>
+          <span>{t('documentManager.breadcrumb.home')}</span>
           <span>›</span>
-          <span className="font-semibold text-gray-900">Knowledge Base</span>
+          <span className="font-semibold text-gray-900">{t('documentManager.breadcrumb.knowledgeBase')}</span>
         </div>
         <Button
           variant="primary"
@@ -28,7 +28,7 @@ export const DocumentManager = ({ files, onAddNew, onUpload }) => {
           icon={<Icon name="plus" size={18} />}
           onClick={onAddNew}
         >
-          Add New
+          {t('documentManager.addNew')}
         </Button>
       </div>
 
@@ -38,25 +38,25 @@ export const DocumentManager = ({ files, onAddNew, onUpload }) => {
           variant="small"
           className="flex-1 font-semibold uppercase tracking-wide"
         >
-          File Name
+          {t('documentManager.table.fileName')}
         </Text>
         <Text
           variant="small"
           className="w-24 text-center font-semibold uppercase tracking-wide"
         >
-          Status
+          {t('documentManager.table.status')}
         </Text>
         <Text
           variant="small"
           className="w-24 text-center font-semibold uppercase tracking-wide"
         >
-          Added
+          {t('documentManager.table.added')}
         </Text>
         <Text
           variant="small"
           className="w-16 text-right font-semibold uppercase tracking-wide"
         >
-          Size
+          {t('documentManager.table.size')}
         </Text>
       </div>
 

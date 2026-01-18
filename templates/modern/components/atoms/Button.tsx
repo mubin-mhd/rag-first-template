@@ -1,3 +1,5 @@
+import type { ButtonProps } from "../../types";
+
 export const Button = ({
   children,
   variant = "primary",
@@ -5,7 +7,8 @@ export const Button = ({
   onClick,
   className = "",
   icon,
-}) => {
+  ...rest
+}: ButtonProps) => {
   const baseStyles =
     "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
 
@@ -27,6 +30,7 @@ export const Button = ({
     <button
       onClick={onClick}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      {...rest}
     >
       {icon && <span className="flex-shrink-0">{icon}</span>}
       {children}

@@ -1,4 +1,10 @@
-export const Text = ({ children, variant = "body", className = "" }) => {
+import type { TextProps } from "../../types";
+
+export const Text = ({
+  children,
+  variant = "body",
+  className = "",
+}: TextProps) => {
   const variants = {
     h1: "text-3xl font-bold text-gray-900",
     h2: "text-2xl font-bold text-gray-900",

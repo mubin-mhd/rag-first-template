@@ -13,6 +13,7 @@ export const ChatPanel = ({
   loading,
   error,
   partial,
+  t,
 }) => {
   return (
     <div className="w-96 bg-gradient-to-br from-purple-50 to-pink-50 border-l border-purple-100 flex flex-col h-full">
@@ -23,13 +24,14 @@ export const ChatPanel = ({
             <Icon name="mic" size={24} className="text-white" />
           </div>
           <div className="flex-1">
-            <Text variant="h3">AI Assistant</Text>
-            <StatusIndicator status="active" label="RAC Active" />
+            <Text variant="h3">{t("chatPanel.title")}</Text>
+            <StatusIndicator status="active" label={t("chatPanel.status")} />
           </div>
           <Button
             variant="ghost"
             size="sm"
             icon={<Icon name="plus" size={18} />}
+            aria-label={t("chatPanel.newChat")}
           />
         </div>
       </div>
@@ -41,11 +43,10 @@ export const ChatPanel = ({
         ))}
       </div>
 
-      {/* Input */}
       <div className="p-4 border-t border-purple-100 bg-white/70 backdrop-blur-sm">
         <div className="flex gap-2">
           <Input
-            placeholder="Ask a question about your documents..."
+            placeholder={t("chatPanel.inputPlaceholder")}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={(e) => e.key === "Enter" && handleSend()}
@@ -56,10 +57,11 @@ export const ChatPanel = ({
             size="md"
             icon={<Icon name="send" size={18} />}
             onClick={handleSend}
+            aria-label={t("chatPanel.send")}
           />
         </div>
         <Text variant="tiny" className="mt-2 text-center">
-          AI can make mistakes. Verify important information.
+          {t("chatPanel.disclaimer")}
         </Text>
       </div>
     </div>

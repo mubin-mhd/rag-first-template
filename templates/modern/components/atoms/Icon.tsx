@@ -1,4 +1,6 @@
-export const Icon = ({ name, size = 20, className = "" }) => {
+import type { IconProps } from "../../types";
+
+export const Icon = ({ name, size = 20, className = "" }: IconProps) => {
   const icons = {
     home: (
       <svg

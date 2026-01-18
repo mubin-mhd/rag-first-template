@@ -1,4 +1,11 @@
-export const Badge = ({ children, variant = "default", size = "md" }) => {
+import type { BadgeProps } from "../../types";
+
+export const Badge = ({
+  children,
+  variant = "default",
+  size = "md",
+  ...rest
+}: BadgeProps) => {
   const variants = {
     default: "bg-gray-100 text-gray-700",
     primary: "bg-purple-100 text-purple-700",
@@ -15,6 +22,7 @@ export const Badge = ({ children, variant = "default", size = "md" }) => {
   return (
     <span
       className={`inline-flex items-center rounded-full font-medium ${variants[variant]} ${sizes[size]}`}
+      {...rest}
     >
       {children}
     </span>

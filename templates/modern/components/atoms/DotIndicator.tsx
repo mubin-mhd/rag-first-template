@@ -1,4 +1,6 @@
-export const DotIndicator = ({ color = "purple" }) => {
+import type { DotIndicatorProps } from "../../types";
+
+export const DotIndicator = ({ color = "purple" }: DotIndicatorProps) => {
   const colors = {
     purple: "bg-purple-500",
     green: "bg-green-500",

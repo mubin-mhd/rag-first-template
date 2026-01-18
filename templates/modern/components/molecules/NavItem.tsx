@@ -1,7 +1,13 @@
 import { Icon } from "../atoms/Icon";
 import { Badge } from "../atoms/Badge";
 
-export const NavItem = ({ icon, label, active = false, onClick, badge }) => {
+export const NavItem = ({
+  icon,
+  label,
+  active = false,
+  onClick,
+  badge = undefined,
+}) => {
   return (
     <button
       onClick={onClick}

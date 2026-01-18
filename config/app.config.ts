@@ -11,11 +11,11 @@ export type AppConfig = {
 
 
 export const defaultAppConfig: AppConfig = {
-    appName: 'RAG UI Starter Kit',
+    appName: 'Kodebin',
     locale: 'en',
     logo: '/logo.svg',
     primaryColor: '#2563eb',
-    footerText: '© 2026 RAG UI Starter Kit',
+    footerText: '© 2026 Kodebin',
 };
 
 let appConfig: AppConfig = { ...defaultAppConfig };
