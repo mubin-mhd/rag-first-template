@@ -4,7 +4,15 @@ import { useStreamingChat } from "@/features/chat/useStreamingChat";
 
 export function useChatController() {
     const { loading, error, sendMessage, partial } = useStreamingChat();
-    const [messages, setMessages] = useState<Message[]>([]);
+    const [messages, setMessages] = useState<Message[]>([
+        {
+            role: "assistant",
+            content:
+                "Hello! I'm ready to answer questions about your knowledge base. I have indexed Product_Specs_v2.pdf.",
+            timestamp: Date.now(),
+            citations: [],
+        },
+    ]);
     const [input, setInput] = useState("");
 
     const handleSend = async () => {

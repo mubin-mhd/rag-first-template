@@ -9,7 +9,7 @@ export interface Citation {
 }
 
 export interface Message {
-  id: string;
+  id?: string;
   role: Role;
   content: string;
   timestamp: number;

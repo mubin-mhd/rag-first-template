@@ -1,5 +1,4 @@
-// ...existing code...
-import "../app/theme.css";
+import "./global.css";
 import { getUiConfig } from "../config/ui.config";
 import { defaultConfig, mergeConfig } from "@/core/config";
 import { loadTemplate } from "@/core/template";

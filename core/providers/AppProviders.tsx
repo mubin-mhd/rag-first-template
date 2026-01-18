@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 import { AppConfigContext } from "./AppConfigContext";
 import { loadTemplate } from "@/core/template";
 import { loadTemplateComponents } from "@/core/template/loadTemplateComponents";
@@ -16,8 +16,15 @@ export function AppProviders({ config, children }: AppProvidersProps) {
   const lang = "en"; // nanti bisa dari env / route
   const messages = config.i18n?.[lang];
 
-  const template = loadTemplate(process.env.NEXT_PUBLIC_TEMPLATE_ID);
-  const components = loadTemplateComponents(template);
+  const template = useMemo(
+    () => loadTemplate(process.env.NEXT_PUBLIC_TEMPLATE_ID),
+    [],
+  );
+
+  const components = useMemo(
+    () => loadTemplateComponents(template),
+    [template],
+  );
 
   return (
     <AppConfigContext.Provider value={config}>
